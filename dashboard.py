@@ -46,6 +46,8 @@ def load_rubric():
 
 @st.cache_data(show_spinner=False)
 def load_assignments():
+    if "assignments_csv" in st.secrets:
+        return pd.read_csv(StringIO(st.secrets["assignments_csv"]))
     return pd.read_csv("data/assignments.csv")
 
 
