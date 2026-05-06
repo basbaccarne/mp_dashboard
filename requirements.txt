@@ -1,0 +1,8 @@
+streamlit
+pyyaml
+boto3
+pandas
+python-dotenv
+plotly
+pillow
+openpyxl

@@ -1,0 +1,13 @@
+# Secrets & credentials
+.env
+data/users.yaml
+.streamlit/secrets.toml
+
+# Data files with personal information
+data/assignments.csv
+data/assignments_new.csv
+data/2526-jun.xlsx
+
+# Python
+__pycache__/
+*.pyc

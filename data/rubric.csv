@@ -1,0 +1,133 @@
+competence,cluster,score,description
+Conceptual Thinking,Ideation,Weak,Shows no original thinking or critical perspective.
+Conceptual Thinking,Ideation,Insufficient,Shows limited understanding or vague ideas.
+Conceptual Thinking,Ideation,Sufficient,Demonstrates basic conceptual thinking.
+Conceptual Thinking,Ideation,Good,Presents relevant and structured ideas.
+Conceptual Thinking,Ideation,Very Good,Shows deep and well-structured insight.
+Conceptual Thinking,Ideation,Excellent,Highly original and conceptually strong ideas.
+Originality,Ideation,Weak,Lacks novelty or distinctiveness.
+Originality,Ideation,Insufficient,Few signs of innovation or new ideas.
+Originality,Ideation,Sufficient,Displays some creative input.
+Originality,Ideation,Good,Demonstrates originality in approach or concept.
+Originality,Ideation,Very Good,Strongly creative and original.
+Originality,Ideation,Excellent,Exceptionally creative and unique.
+Problem Analysis,Research,Weak,Unable to identify key issues or context.
+Problem Analysis,Research,Insufficient,Limited problem definition.
+Problem Analysis,Research,Sufficient,Identifies main problems.
+Problem Analysis,Research,Good,Analyzes key issues with some depth.
+Problem Analysis,Research,Very Good,Thorough and nuanced analysis.
+Problem Analysis,Research,Excellent,Insightful and deep understanding of the problem.
+Research Depth,Research,Weak,No relevant research used.
+Research Depth,Research,Insufficient,Superficial use of research sources.
+Research Depth,Research,Sufficient,Applies basic research appropriately.
+Research Depth,Research,Good,Uses multiple relevant sources.
+Research Depth,Research,Very Good,Integrates strong research insightfully.
+Research Depth,Research,Excellent,Outstanding and critical use of research.
+Technical Skill,Execution,Weak,Fails to apply basic techniques.
+Technical Skill,Execution,Insufficient,Some technical ability shown but with errors.
+Technical Skill,Execution,Sufficient,Applies basic techniques adequately.
+Technical Skill,Execution,Good,Good application with minor issues.
+Technical Skill,Execution,Very Good,Confident and correct technical execution.
+Technical Skill,Execution,Excellent,Flawless and advanced technical skills.
+Execution Quality,Execution,Weak,Poor or inconsistent output.
+Execution Quality,Execution,Insufficient,Incomplete or low-quality work.
+Execution Quality,Execution,Sufficient,Output meets basic requirements.
+Execution Quality,Execution,Good,Clean and functional execution.
+Execution Quality,Execution,Very Good,High-quality and professional.
+Execution Quality,Execution,Excellent,Outstanding and polished final work.
+Prototyping,Execution,Weak,No prototype developed.
+Prototyping,Execution,Insufficient,Incomplete or unclear prototype.
+Prototyping,Execution,Sufficient,Functional basic prototype created.
+Prototyping,Execution,Good,Well-structured prototype.
+Prototyping,Execution,Very Good,Effective and testable prototype.
+Prototyping,Execution,Excellent,High-fidelity and impactful prototype.
+Tool Use,Execution,Weak,No appropriate tools used.
+Tool Use,Execution,Insufficient,Struggles to use tools effectively.
+Tool Use,Execution,Sufficient,Uses standard tools adequately.
+Tool Use,Execution,Good,Applies tools with competence.
+Tool Use,Execution,Very Good,Fluent and appropriate tool usage.
+Tool Use,Execution,Excellent,Expert and innovative use of tools.
+Communication,Presentation,Weak,Communication is unclear or absent.
+Communication,Presentation,Insufficient,Message is hard to understand.
+Communication,Presentation,Sufficient,Communicates key points clearly.
+Communication,Presentation,Good,Clear and structured communication.
+Communication,Presentation,Very Good,Engaging and effective delivery.
+Communication,Presentation,Excellent,Exceptional and inspiring communication.
+Visual Clarity,Presentation,Weak,Visuals are messy or confusing.
+Visual Clarity,Presentation,Insufficient,Limited use of visual design.
+Visual Clarity,Presentation,Sufficient,Functional and understandable visuals.
+Visual Clarity,Presentation,Good,Clear and pleasant visuals.
+Visual Clarity,Presentation,Very Good,Professional and effective visuals.
+Visual Clarity,Presentation,Excellent,Outstanding visual storytelling.
+Audience Engagement,Presentation,Weak,No engagement with audience.
+Audience Engagement,Presentation,Insufficient,Little awareness of audience.
+Audience Engagement,Presentation,Sufficient,Basic connection with audience.
+Audience Engagement,Presentation,Good,Actively involves audience.
+Audience Engagement,Presentation,Very Good,Confident and engaging.
+Audience Engagement,Presentation,Excellent,Captivating and responsive.
+Argumentation,Argumentation,Weak,Lacks structure or logic.
+Argumentation,Argumentation,Insufficient,Weak or unsupported arguments.
+Argumentation,Argumentation,Sufficient,Presents arguments with some support.
+Argumentation,Argumentation,Good,Clearly reasoned and backed arguments.
+Argumentation,Argumentation,Very Good,Logical and persuasive argumentation.
+Argumentation,Argumentation,Excellent,Exceptionally rigorous and well-supported.
+Collaboration,Teamwork,Weak,Disruptive or disengaged in team work.
+Collaboration,Teamwork,Insufficient,Minimal collaboration.
+Collaboration,Teamwork,Sufficient,Participates in group efforts.
+Collaboration,Teamwork,Good,Works well in team setting.
+Collaboration,Teamwork,Very Good,Proactive and cooperative.
+Collaboration,Teamwork,Excellent,Highly effective and supportive teammate.
+Initiative,Teamwork,Weak,Waits for direction.
+Initiative,Teamwork,Insufficient,Only acts when prompted.
+Initiative,Teamwork,Sufficient,Takes some initiative.
+Initiative,Teamwork,Good,Takes initiative when needed.
+Initiative,Teamwork,Very Good,Often self-starting and proactive.
+Initiative,Teamwork,Excellent,Drives the project forward independently.
+Project Planning,Project Management,Weak,No clear planning shown.
+Project Planning,Project Management,Insufficient,Plans are vague or unrealistic.
+Project Planning,Project Management,Sufficient,Has a basic plan.
+Project Planning,Project Management,Good,Plans with reasonable accuracy.
+Project Planning,Project Management,Very Good,Detailed and realistic planning.
+Project Planning,Project Management,Excellent,Excellent foresight and organization.
+Responsibility,Project Management,Weak,Neglects responsibilities.
+Responsibility,Project Management,Insufficient,Unreliable performance.
+Responsibility,Project Management,Sufficient,Meets basic responsibilities.
+Responsibility,Project Management,Good,Dependable and accountable.
+Responsibility,Project Management,Very Good,Acts with strong ownership.
+Responsibility,Project Management,Excellent,Exemplary sense of responsibility.
+Ethics,Professionalism,Weak,Disregards ethical norms.
+Ethics,Professionalism,Insufficient,Questionable ethical choices.
+Ethics,Professionalism,Sufficient,Shows basic ethical awareness.
+Ethics,Professionalism,Good,Makes generally ethical choices.
+Ethics,Professionalism,Very Good,Consistently ethical behavior.
+Ethics,Professionalism,Excellent,Exceptional ethical leadership.
+Context Awareness,Professionalism,Weak,No awareness of context.
+Context Awareness,Professionalism,Insufficient,Lacks understanding of environment.
+Context Awareness,Professionalism,Sufficient,Understands basic context.
+Context Awareness,Professionalism,Good,Tailors work to setting.
+Context Awareness,Professionalism,Very Good,Insightful contextual decisions.
+Context Awareness,Professionalism,Excellent,Expert contextual framing.
+User Empathy,User Focus,Weak,No attention to user needs.
+User Empathy,User Focus,Insufficient,Limited user consideration.
+User Empathy,User Focus,Sufficient,Some user awareness.
+User Empathy,User Focus,Good,Design considers user perspective.
+User Empathy,User Focus,Very Good,Strong empathy for user.
+User Empathy,User Focus,Excellent,Deeply user-centered.
+Adaptability,Resilience,Weak,Resists change or feedback.
+Adaptability,Resilience,Insufficient,Struggles with unexpected changes.
+Adaptability,Resilience,Sufficient,Adjusts when necessary.
+Adaptability,Resilience,Good,Generally flexible and open.
+Adaptability,Resilience,Very Good,Adapts quickly and positively.
+Adaptability,Resilience,Excellent,Thrives in changing conditions.
+Self-Reflection,Resilience,Weak,No signs of reflection.
+Self-Reflection,Resilience,Insufficient,Little awareness of strengths/weaknesses.
+Self-Reflection,Resilience,Sufficient,Basic reflection provided.
+Self-Reflection,Resilience,Good,Identifies areas to improve.
+Self-Reflection,Resilience,Very Good,Thoughtful and honest reflection.
+Self-Reflection,Resilience,Excellent,Deep self-awareness and growth orientation.
+Final Result,Product Quality,Weak,Unfinished or unfit for use.
+Final Result,Product Quality,Insufficient,Below minimum expectations.
+Final Result,Product Quality,Sufficient,Meets basic quality standards.
+Final Result,Product Quality,Good,Well-crafted final output.
+Final Result,Product Quality,Very Good,High-quality and convincing result.
+Final Result,Product Quality,Excellent,Outstanding and impactful final product.
