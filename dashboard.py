@@ -29,6 +29,18 @@ DUTCH_TO_EN_SCORE = {
 }
 
 
+# ── Export configuration ──────────────────────────────────────────────────────
+# EXPORT_COLUMNS: column names to include, in order.
+#   None  → evaluator, rol, all competency scores, evaluation, Q1…Q5
+#   list  → e.g. ["evaluator", "rol", "Kwaliteit opzoekwerk", "evaluation"]
+EXPORT_COLUMNS = None
+
+# EXPORT_SORT_BY: column(s) to sort rows by before export.
+#   None  → natural order (order data arrived in S3)
+#   list  → e.g. ["rol"] or ["evaluator"]
+EXPORT_SORT_BY = None
+
+
 # ── Cached loaders ────────────────────────────────────────────────────────────
 
 @st.cache_data(show_spinner=False)
@@ -191,6 +203,27 @@ def fallback_sample_data():
     df = df_scores.merge(df_reviews.drop(columns=["evaluator"]), left_index=True, right_index=True)
     df.insert(0, "student", "Leon Dehullu")
     return df
+
+
+# ── CSV export ───────────────────────────────────────────────────────────────
+
+def build_export_csv(df_student, competences):
+    if EXPORT_COLUMNS is not None:
+        cols = [c for c in EXPORT_COLUMNS if c in df_student.columns]
+    else:
+        score_cols = [c for c in competences if c in df_student.columns]
+        q_cols = [c for c in df_student.columns if c.startswith("Q")]
+        wanted = ["evaluator", "rol"] + score_cols + ["evaluation"] + q_cols
+        cols = [c for c in wanted if c in df_student.columns]
+
+    df_export = df_student[cols].copy()
+
+    if EXPORT_SORT_BY:
+        sort_cols = [c for c in EXPORT_SORT_BY if c in df_export.columns]
+        if sort_cols:
+            df_export = df_export.sort_values(sort_cols).reset_index(drop=True)
+
+    return df_export.to_csv(index=False).encode("utf-8")
 
 
 # ── Visualization helpers ─────────────────────────────────────────────────────
@@ -498,8 +531,12 @@ if st.button("⬅ Terug naar studentenoverzicht"):
     st.rerun()
 
 student = st.session_state.selected_student
-st.markdown(f"## {student}")
-st.caption(f"Academiejaar: {st.session_state.selected_year}")
+col_title, col_export = st.columns([5, 1])
+with col_title:
+    st.markdown(f"## {student}")
+    st.caption(f"Academiejaar: {st.session_state.selected_year}")
+with col_export:
+    st.write("")  # vertical alignment nudge
 
 df_all = st.session_state.full_data
 df_rubric = load_rubric()
@@ -519,6 +556,17 @@ if df_student.empty:
     st.info(f"Geen evaluatiedata gevonden voor **{student}**.")
     render_footer()
     st.stop()
+
+# Export button
+with col_export:
+    filename = f"{student.replace(' ', '_')}_{st.session_state.selected_year}.csv"
+    st.download_button(
+        label="⬇ Download CSV",
+        data=build_export_csv(df_student, competences),
+        file_name=filename,
+        mime="text/csv",
+        width="stretch",
+    )
 
 # Build df_scores: evaluator column + rubric competence columns present in data
 competences = df_rubric["competence"].unique().tolist()
