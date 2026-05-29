@@ -1,133 +1,121 @@
 competence,cluster,score,description
-Conceptual Thinking,Ideation,Weak,Shows no original thinking or critical perspective.
-Conceptual Thinking,Ideation,Insufficient,Shows limited understanding or vague ideas.
-Conceptual Thinking,Ideation,Sufficient,Demonstrates basic conceptual thinking.
-Conceptual Thinking,Ideation,Good,Presents relevant and structured ideas.
-Conceptual Thinking,Ideation,Very Good,Shows deep and well-structured insight.
-Conceptual Thinking,Ideation,Excellent,Highly original and conceptually strong ideas.
-Originality,Ideation,Weak,Lacks novelty or distinctiveness.
-Originality,Ideation,Insufficient,Few signs of innovation or new ideas.
-Originality,Ideation,Sufficient,Displays some creative input.
-Originality,Ideation,Good,Demonstrates originality in approach or concept.
-Originality,Ideation,Very Good,Strongly creative and original.
-Originality,Ideation,Excellent,Exceptionally creative and unique.
-Problem Analysis,Research,Weak,Unable to identify key issues or context.
-Problem Analysis,Research,Insufficient,Limited problem definition.
-Problem Analysis,Research,Sufficient,Identifies main problems.
-Problem Analysis,Research,Good,Analyzes key issues with some depth.
-Problem Analysis,Research,Very Good,Thorough and nuanced analysis.
-Problem Analysis,Research,Excellent,Insightful and deep understanding of the problem.
-Research Depth,Research,Weak,No relevant research used.
-Research Depth,Research,Insufficient,Superficial use of research sources.
-Research Depth,Research,Sufficient,Applies basic research appropriately.
-Research Depth,Research,Good,Uses multiple relevant sources.
-Research Depth,Research,Very Good,Integrates strong research insightfully.
-Research Depth,Research,Excellent,Outstanding and critical use of research.
-Technical Skill,Execution,Weak,Fails to apply basic techniques.
-Technical Skill,Execution,Insufficient,Some technical ability shown but with errors.
-Technical Skill,Execution,Sufficient,Applies basic techniques adequately.
-Technical Skill,Execution,Good,Good application with minor issues.
-Technical Skill,Execution,Very Good,Confident and correct technical execution.
-Technical Skill,Execution,Excellent,Flawless and advanced technical skills.
-Execution Quality,Execution,Weak,Poor or inconsistent output.
-Execution Quality,Execution,Insufficient,Incomplete or low-quality work.
-Execution Quality,Execution,Sufficient,Output meets basic requirements.
-Execution Quality,Execution,Good,Clean and functional execution.
-Execution Quality,Execution,Very Good,High-quality and professional.
-Execution Quality,Execution,Excellent,Outstanding and polished final work.
-Prototyping,Execution,Weak,No prototype developed.
-Prototyping,Execution,Insufficient,Incomplete or unclear prototype.
-Prototyping,Execution,Sufficient,Functional basic prototype created.
-Prototyping,Execution,Good,Well-structured prototype.
-Prototyping,Execution,Very Good,Effective and testable prototype.
-Prototyping,Execution,Excellent,High-fidelity and impactful prototype.
-Tool Use,Execution,Weak,No appropriate tools used.
-Tool Use,Execution,Insufficient,Struggles to use tools effectively.
-Tool Use,Execution,Sufficient,Uses standard tools adequately.
-Tool Use,Execution,Good,Applies tools with competence.
-Tool Use,Execution,Very Good,Fluent and appropriate tool usage.
-Tool Use,Execution,Excellent,Expert and innovative use of tools.
-Communication,Presentation,Weak,Communication is unclear or absent.
-Communication,Presentation,Insufficient,Message is hard to understand.
-Communication,Presentation,Sufficient,Communicates key points clearly.
-Communication,Presentation,Good,Clear and structured communication.
-Communication,Presentation,Very Good,Engaging and effective delivery.
-Communication,Presentation,Excellent,Exceptional and inspiring communication.
-Visual Clarity,Presentation,Weak,Visuals are messy or confusing.
-Visual Clarity,Presentation,Insufficient,Limited use of visual design.
-Visual Clarity,Presentation,Sufficient,Functional and understandable visuals.
-Visual Clarity,Presentation,Good,Clear and pleasant visuals.
-Visual Clarity,Presentation,Very Good,Professional and effective visuals.
-Visual Clarity,Presentation,Excellent,Outstanding visual storytelling.
-Audience Engagement,Presentation,Weak,No engagement with audience.
-Audience Engagement,Presentation,Insufficient,Little awareness of audience.
-Audience Engagement,Presentation,Sufficient,Basic connection with audience.
-Audience Engagement,Presentation,Good,Actively involves audience.
-Audience Engagement,Presentation,Very Good,Confident and engaging.
-Audience Engagement,Presentation,Excellent,Captivating and responsive.
-Argumentation,Argumentation,Weak,Lacks structure or logic.
-Argumentation,Argumentation,Insufficient,Weak or unsupported arguments.
-Argumentation,Argumentation,Sufficient,Presents arguments with some support.
-Argumentation,Argumentation,Good,Clearly reasoned and backed arguments.
-Argumentation,Argumentation,Very Good,Logical and persuasive argumentation.
-Argumentation,Argumentation,Excellent,Exceptionally rigorous and well-supported.
-Collaboration,Teamwork,Weak,Disruptive or disengaged in team work.
-Collaboration,Teamwork,Insufficient,Minimal collaboration.
-Collaboration,Teamwork,Sufficient,Participates in group efforts.
-Collaboration,Teamwork,Good,Works well in team setting.
-Collaboration,Teamwork,Very Good,Proactive and cooperative.
-Collaboration,Teamwork,Excellent,Highly effective and supportive teammate.
-Initiative,Teamwork,Weak,Waits for direction.
-Initiative,Teamwork,Insufficient,Only acts when prompted.
-Initiative,Teamwork,Sufficient,Takes some initiative.
-Initiative,Teamwork,Good,Takes initiative when needed.
-Initiative,Teamwork,Very Good,Often self-starting and proactive.
-Initiative,Teamwork,Excellent,Drives the project forward independently.
-Project Planning,Project Management,Weak,No clear planning shown.
-Project Planning,Project Management,Insufficient,Plans are vague or unrealistic.
-Project Planning,Project Management,Sufficient,Has a basic plan.
-Project Planning,Project Management,Good,Plans with reasonable accuracy.
-Project Planning,Project Management,Very Good,Detailed and realistic planning.
-Project Planning,Project Management,Excellent,Excellent foresight and organization.
-Responsibility,Project Management,Weak,Neglects responsibilities.
-Responsibility,Project Management,Insufficient,Unreliable performance.
-Responsibility,Project Management,Sufficient,Meets basic responsibilities.
-Responsibility,Project Management,Good,Dependable and accountable.
-Responsibility,Project Management,Very Good,Acts with strong ownership.
-Responsibility,Project Management,Excellent,Exemplary sense of responsibility.
-Ethics,Professionalism,Weak,Disregards ethical norms.
-Ethics,Professionalism,Insufficient,Questionable ethical choices.
-Ethics,Professionalism,Sufficient,Shows basic ethical awareness.
-Ethics,Professionalism,Good,Makes generally ethical choices.
-Ethics,Professionalism,Very Good,Consistently ethical behavior.
-Ethics,Professionalism,Excellent,Exceptional ethical leadership.
-Context Awareness,Professionalism,Weak,No awareness of context.
-Context Awareness,Professionalism,Insufficient,Lacks understanding of environment.
-Context Awareness,Professionalism,Sufficient,Understands basic context.
-Context Awareness,Professionalism,Good,Tailors work to setting.
-Context Awareness,Professionalism,Very Good,Insightful contextual decisions.
-Context Awareness,Professionalism,Excellent,Expert contextual framing.
-User Empathy,User Focus,Weak,No attention to user needs.
-User Empathy,User Focus,Insufficient,Limited user consideration.
-User Empathy,User Focus,Sufficient,Some user awareness.
-User Empathy,User Focus,Good,Design considers user perspective.
-User Empathy,User Focus,Very Good,Strong empathy for user.
-User Empathy,User Focus,Excellent,Deeply user-centered.
-Adaptability,Resilience,Weak,Resists change or feedback.
-Adaptability,Resilience,Insufficient,Struggles with unexpected changes.
-Adaptability,Resilience,Sufficient,Adjusts when necessary.
-Adaptability,Resilience,Good,Generally flexible and open.
-Adaptability,Resilience,Very Good,Adapts quickly and positively.
-Adaptability,Resilience,Excellent,Thrives in changing conditions.
-Self-Reflection,Resilience,Weak,No signs of reflection.
-Self-Reflection,Resilience,Insufficient,Little awareness of strengths/weaknesses.
-Self-Reflection,Resilience,Sufficient,Basic reflection provided.
-Self-Reflection,Resilience,Good,Identifies areas to improve.
-Self-Reflection,Resilience,Very Good,Thoughtful and honest reflection.
-Self-Reflection,Resilience,Excellent,Deep self-awareness and growth orientation.
-Final Result,Product Quality,Weak,Unfinished or unfit for use.
-Final Result,Product Quality,Insufficient,Below minimum expectations.
-Final Result,Product Quality,Sufficient,Meets basic quality standards.
-Final Result,Product Quality,Good,Well-crafted final output.
-Final Result,Product Quality,Very Good,High-quality and convincing result.
-Final Result,Product Quality,Excellent,Outstanding and impactful final product.
+Kwaliteit opzoekwerk,Informatie & analyse,Weak,"Beperkte dekking (vb. verouderd, irrelevant, te eng), enkele belangrijke gebieden ontbreken. De student is niet in staat tot het zelfstandig verzamelen van materiaal."
+Kwaliteit opzoekwerk,Informatie & analyse,Insufficient,"Beperkte dekking (vb. verouderd, irrelevant, te eng), enkele belangrijke gebieden ontbreken. De student is niet in staat tot het zelfstandig verzamelen van materiaal."
+Kwaliteit opzoekwerk,Informatie & analyse,Sufficient,Basisdekking. De student draagt beperkt zelf materiaal aan dat veelal relevant en actueel is.
+Kwaliteit opzoekwerk,Informatie & analyse,Good,"Grondige dekking. Slechts zeer kleine gaten aanwezig. De student draagt grotendeels zelf materiaal aan dat relevant en actueel is."
+Kwaliteit opzoekwerk,Informatie & analyse,Very Good,"Grondige dekking. Slechts zeer kleine gaten aanwezig. De student draagt grotendeels zelf materiaal aan dat relevant en actueel is."
+Kwaliteit opzoekwerk,Informatie & analyse,Excellent,Zeer grondig. Het materiaal dat de student aandraagt omvat zo goed als alle informatie en recente bronnen.
+Kritische analyse,Informatie & analyse,Weak,"Beperkte tot geen kritische analyse, voornamelijk beschrijvend. Een vergelijking van resultaten uit de literatuur ontbreekt of is ontoereikend."
+Kritische analyse,Informatie & analyse,Insufficient,"Beperkte tot geen kritische analyse, voornamelijk beschrijvend. Een vergelijking van resultaten uit de literatuur ontbreekt of is ontoereikend."
+Kritische analyse,Informatie & analyse,Sufficient,Basis aan kritische analyse. Beperkte vergelijking van resultaten uit de literatuur.
+Kritische analyse,Informatie & analyse,Good,"Grondige kritische analyse met functionele vergelijking van resultaten uit de literatuur. Bronnen zijn geïntegreerd tot een coherent verhaal."
+Kritische analyse,Informatie & analyse,Very Good,"Grondige kritische analyse met functionele vergelijking van resultaten uit de literatuur. Bronnen zijn geïntegreerd tot een coherent verhaal."
+Kritische analyse,Informatie & analyse,Excellent,Hoogstaande kritische analyse en vergelijking van resultaten. Bronnen zijn geïntegreerd tot een overtuigend verhaal.
+Inzicht probleemstelling,Onderzoeksvraag,Weak,De student slaagt er niet in de probleemstelling binnen het onderzoeksveld te positioneren.
+Inzicht probleemstelling,Onderzoeksvraag,Insufficient,De student slaagt er niet in de probleemstelling binnen het onderzoeksveld te positioneren.
+Inzicht probleemstelling,Onderzoeksvraag,Sufficient,"De student relateert de probleemstelling enigszins aan het onderzoeksveld. De analyse van de probleemstelling is correct maar oppervlakkig."
+Inzicht probleemstelling,Onderzoeksvraag,Good,De student plaatst de probleemstelling binnen het onderzoeksveld. De analyse van de probleemstelling is grondig.
+Inzicht probleemstelling,Onderzoeksvraag,Very Good,De student plaatst de probleemstelling binnen het onderzoeksveld. De analyse van de probleemstelling is heel grondig.
+Inzicht probleemstelling,Onderzoeksvraag,Excellent,"De student plaatst de probleemstelling binnen de state of the art van het onderzoeksveld. De analyse van de probleemstelling is genuanceerd en tot in detail uitgewerkt."
+Verwoording onderzoeksvraag,Onderzoeksvraag,Weak,"Het werk mist een duidelijke onderzoeksvraag. De link met de probleemstelling werd niet of onvoldoende verkend of versterkt."
+Verwoording onderzoeksvraag,Onderzoeksvraag,Insufficient,"Het werk mist een duidelijke onderzoeksvraag. De link met de probleemstelling werd niet of onvoldoende verkend of versterkt."
+Verwoording onderzoeksvraag,Onderzoeksvraag,Sufficient,Het werk bevat een summiere onderzoeksvraag als resultaat van een beperkte reflectie op de probleemstelling.
+Verwoording onderzoeksvraag,Onderzoeksvraag,Good,Het werk bevat een duidelijke onderzoeksvraag als resultaat van een uitgebreide reflectie op de probleemstelling.
+Verwoording onderzoeksvraag,Onderzoeksvraag,Very Good,Het werk bevat een duidelijke onderzoeksvraag als resultaat van een uitgebreide reflectie op de probleemstelling.
+Verwoording onderzoeksvraag,Onderzoeksvraag,Excellent,Het werk bevat een duidelijke onderzoeksvraag als resultaat van een zelfstandige en overtuigende reflectie op de probleemstelling.
+Organisatorische vaardigheden,Oplossingsmethodiek,Weak,"De oplossingsmethodiek is onvoldoende uitgewerkt of afwezig. De student werkt slordig, chaotisch en onvoorbereid, wat resulteert in weinig bruikbare resultaten. De student slaagt er onvoldoende in om de methodiek bij te sturen of te anticiperen op onvoorziene omstandigheden."
+Organisatorische vaardigheden,Oplossingsmethodiek,Insufficient,"De oplossingsmethodiek is onvoldoende uitgewerkt of afwezig. De student werkt slordig, chaotisch en onvoorbereid, wat resulteert in weinig bruikbare resultaten. De student slaagt er onvoldoende in om de methodiek bij te sturen of te anticiperen op onvoorziene omstandigheden."
+Organisatorische vaardigheden,Oplossingsmethodiek,Sufficient,"De oplossingsmethodiek is realistisch en de student werkt enigszins georganiseerd waardoor bruikbare resultaten verkregen worden. De student vertoont voldoende flexibiliteit om in te spelen op verandering."
+Organisatorische vaardigheden,Oplossingsmethodiek,Good,"De oplossingsmethodiek is solide en de student werkt systematisch waardoor accurate en nauwkeurige resultaten verkregen worden. De student stuurt bij waar nodig."
+Organisatorische vaardigheden,Oplossingsmethodiek,Very Good,"De oplossingsmethodiek is solide en de student werkt systematisch waardoor accurate en nauwkeurige resultaten verkregen worden. De student stuurt bij waar nodig."
+Organisatorische vaardigheden,Oplossingsmethodiek,Excellent,"De oplossingsmethodiek is solide en proactief en is afgestemd op de verkregen resultaten. De student werkt systematisch waardoor accurate en nauwkeurige resultaten verkregen worden. De student speelt vlot in op onvoorziene omstandigheden."
+Kwaliteit methodiek,Oplossingsmethodiek,Weak,De student maakt fouten tegen de gangbare oplossingsmethodieken binnen het vakgebied.
+Kwaliteit methodiek,Oplossingsmethodiek,Insufficient,De student maakt fouten tegen de gangbare oplossingsmethodieken binnen het vakgebied.
+Kwaliteit methodiek,Oplossingsmethodiek,Sufficient,De student beperkt zich tot de gangbare oplossingsmethodieken.
+Kwaliteit methodiek,Oplossingsmethodiek,Good,De student past de gangbare oplossingsmethodieken binnen het vakgebied consequent aan de voorliggende probleemstelling aan.
+Kwaliteit methodiek,Oplossingsmethodiek,Very Good,De student past de gangbare oplossingsmethodieken binnen het vakgebied consequent aan de voorliggende probleemstelling aan.
+Kwaliteit methodiek,Oplossingsmethodiek,Excellent,De student stuurt de gangbare oplossingsmethodieken binnen het vakgebied creatief en kritisch bij.
+Kennis toepassen,Kennistoepassing,Weak,De student beheerst de discipline onvoldoende en slaagt er te beperkt in relevante kennis op de probleemstelling toe te passen.
+Kennis toepassen,Kennistoepassing,Insufficient,De student beheerst de discipline onvoldoende en slaagt er te beperkt in relevante kennis op de probleemstelling toe te passen.
+Kennis toepassen,Kennistoepassing,Sufficient,De student beheerst de discipline voldoende. Toepassing van relevante kennis op de probleemstelling is beperkt.
+Kennis toepassen,Kennistoepassing,Good,De student beheerst de discipline in grote mate en slaagt er vlot in relevante kennis op de probleemstelling toe te passen.
+Kennis toepassen,Kennistoepassing,Very Good,De student beheerst de discipline in grote mate en slaagt er vlot in relevante kennis op de probleemstelling toe te passen.
+Kennis toepassen,Kennistoepassing,Excellent,De student combineert geavanceerde kennis binnen de discipline en past die overtuigend toe op de probleemstelling.
+Implementatie,Kennistoepassing,Weak,De implementatie voldoet niet aan de verwachtingen en het ontbreekt aan degelijke testen.
+Implementatie,Kennistoepassing,Insufficient,De implementatie voldoet niet aan de verwachtingen en het ontbreekt aan degelijke testen.
+Implementatie,Kennistoepassing,Sufficient,De implementatie voldoet net aan de verwachtingen en werd beperkt getest.
+Implementatie,Kennistoepassing,Good,De implementatie werkt naar behoren en werd afdoende getest.
+Implementatie,Kennistoepassing,Very Good,De implementatie werkt naar behoren en werd afdoende getest.
+Implementatie,Kennistoepassing,Excellent,De implementatie is erg performant en werd uitvoerig beproefd.
+Conceptueel denken,Probleemoplossend denken,Weak,"De student slaagt er onvoldoende in het gepaste abstractieniveau te identificeren bij het uitwerken van een methodiek of het ontwerpen van producten of processen."
+Conceptueel denken,Probleemoplossend denken,Insufficient,"De student slaagt er onvoldoende in het gepaste abstractieniveau te identificeren bij het uitwerken van een methodiek of het ontwerpen van producten of processen."
+Conceptueel denken,Probleemoplossend denken,Sufficient,De student verkent enkel bij het uitwerken van de methodiek een gepast niveau van abstractie.
+Conceptueel denken,Probleemoplossend denken,Good,"De student neemt een gepast niveau van abstractie mee bij het uitwerken van de methodiek en zoekt dit soms ook op bij het ontwerpen van producten of processen."
+Conceptueel denken,Probleemoplossend denken,Very Good,"De student neemt een gepast niveau van abstractie mee bij het uitwerken van de methodiek en zoekt dit soms ook op bij het ontwerpen van producten of processen."
+Conceptueel denken,Probleemoplossend denken,Excellent,"De student redeneert spontaan en vlot op verschillende abstractieniveaus bij het ontwerpen van producten of processen en het uitwerken van een methodiek."
+Omgaan met onzekerheid,Probleemoplossend denken,Weak,De student gaat voorbij aan de variabele context en slaagt er onvoldoende in om er een bijhorende oplossingsstrategie aan te verbinden.
+Omgaan met onzekerheid,Probleemoplossend denken,Insufficient,De student gaat voorbij aan de variabele context en slaagt er onvoldoende in om er een bijhorende oplossingsstrategie aan te verbinden.
+Omgaan met onzekerheid,Probleemoplossend denken,Sufficient,De student integreert de variabele context minimaal en komt mits ondersteuning tot de gedeeltelijke uitwerking van oplossingsstrategieën.
+Omgaan met onzekerheid,Probleemoplossend denken,Good,De student capteert de variabele context en voorziet een degelijke uitwerking van bijhorende oplossingsstrategieën.
+Omgaan met onzekerheid,Probleemoplossend denken,Very Good,De student capteert de variabele context en voorziet een degelijke uitwerking van bijhorende oplossingsstrategieën.
+Omgaan met onzekerheid,Probleemoplossend denken,Excellent,De student weet de variabele context op een omvattende en creatieve manier te integreren en werkt bijhorende oplossingsstrategieën op een uitstekende wijze uit.
+Motiveren van keuzes,Resultaten & communicatie,Weak,"De onderbouwing van redeneringen is onvoldoende consistent of te oppervlakkig en het ontbreekt de argumentatie aan overtuigingskracht."
+Motiveren van keuzes,Resultaten & communicatie,Insufficient,"De onderbouwing van redeneringen is onvoldoende consistent of te oppervlakkig en het ontbreekt de argumentatie aan overtuigingskracht."
+Motiveren van keuzes,Resultaten & communicatie,Sufficient,De student onderbouwt gemaakte keuzes in voldoende mate. De argumentatie is voor verbetering vatbaar.
+Motiveren van keuzes,Resultaten & communicatie,Good,De redeneringen van de student zijn overwegend duidelijk en voorzien van relevante en heldere argumenten.
+Motiveren van keuzes,Resultaten & communicatie,Very Good,De redeneringen van de student zijn overwegend duidelijk en voorzien van relevante en heldere argumenten.
+Motiveren van keuzes,Resultaten & communicatie,Excellent,De student onderbouwt gemaakte keuzes met uitstekende redeneringen en voorziet een duidelijke argumentatie van hoog niveau die relevant is en overtuigt.
+Kritische verwerking,Resultaten & communicatie,Weak,De student reflecteert in onvoldoende mate over de eigen resultaten en gaat voorbij aan elke vorm van validatie.
+Kritische verwerking,Resultaten & communicatie,Insufficient,De student reflecteert in onvoldoende mate over de eigen resultaten en gaat voorbij aan elke vorm van validatie.
+Kritische verwerking,Resultaten & communicatie,Sufficient,De student beperkt zich tot een basis aan kritische reflectie over de eigen resultaten. Ook m.b.t. validatie worden slechts beperkte stappen gezet.
+Kritische verwerking,Resultaten & communicatie,Good,De student reflecteert naar behoren over de eigen resultaten en voorziet een accurate validatie.
+Kritische verwerking,Resultaten & communicatie,Very Good,De student reflecteert naar behoren over de eigen resultaten en voorziet een accurate validatie.
+Kritische verwerking,Resultaten & communicatie,Excellent,Bij de verwerking en validatie van eigen resultaten legt de student steeds kritische zin aan de dag en houdt daarbij steevast de onderzoeksvraag als einddoel voor ogen.
+Heldere communicatie,Resultaten & communicatie,Weak,"De student communiceert onduidelijk en heeft moeite met het overbrengen van ideeën. De communicatie is niet logisch opgebouwd en kent onvoldoende samenhang."
+Heldere communicatie,Resultaten & communicatie,Insufficient,"De student communiceert onduidelijk en heeft moeite met het overbrengen van ideeën. De communicatie is niet logisch opgebouwd en kent onvoldoende samenhang."
+Heldere communicatie,Resultaten & communicatie,Sufficient,De student communiceert voldoende helder maar de communicatie mist soms precisie en logica in opbouw.
+Heldere communicatie,Resultaten & communicatie,Good,"De student communiceert helder, met oog voor detail en logische opbouw."
+Heldere communicatie,Resultaten & communicatie,Very Good,"De student communiceert helder, met oog voor detail en logische opbouw."
+Heldere communicatie,Resultaten & communicatie,Excellent,"De student communiceert zeer helder en met veel oog voor structuur en detail. De communicatie is vlot, duidelijk opgebouwd en logisch samenhangend."
+Organisatie & planning,Professioneel werken,Weak,De student komt regelmatig afspraken niet na en mist vaak deadlines zonder geldige reden. De rapportering is minimaal.
+Organisatie & planning,Professioneel werken,Insufficient,De student komt regelmatig afspraken niet na en mist vaak deadlines zonder geldige reden. De rapportering is minimaal.
+Organisatie & planning,Professioneel werken,Sufficient,De student komt soms afspraken niet na en mist af en toe deadlines zonder geldige reden. De rapportering is beperkt.
+Organisatie & planning,Professioneel werken,Good,De student komt afspraken na en mist nooit deadlines zonder geldige reden. De rapportering is relevant en goed uitgewerkt.
+Organisatie & planning,Professioneel werken,Very Good,De student komt afspraken na en mist nooit deadlines zonder geldige reden. De rapportering is relevant en goed uitgewerkt.
+Organisatie & planning,Professioneel werken,Excellent,De student is steeds punctueel in het nakomen van afspraken en haalt vlot alle deadlines. De rapportering is volledig en functioneel.
+Attitude,Professioneel werken,Weak,"De student toont weinig tot geen motivatie en initiatief. De student werkt slordig, voert hoogstens uit wat de begeleiders vragen en houdt te weinig of geen rekening met de werkomgeving."
+Attitude,Professioneel werken,Insufficient,"De student toont weinig tot geen motivatie en initiatief. De student werkt slordig, voert hoogstens uit wat de begeleiders vragen en houdt te weinig of geen rekening met de werkomgeving."
+Attitude,Professioneel werken,Sufficient,"De student is gemotiveerd maar neemt weinig initiatief. Coaching van de begeleiders wordt beperkt aangegrepen om vooruitgang te boeken. Er is voldoende respect voor de werkomgeving."
+Attitude,Professioneel werken,Good,"De student is gemotiveerd en neemt initiatief. De student maakt gebruik van de coaching van de begeleiders en komt hierdoor tot zelfstandigheid. De student houdt steeds rekening met de werkomgeving."
+Attitude,Professioneel werken,Very Good,"De student is gemotiveerd en neemt initiatief. De student maakt gebruik van de coaching van de begeleiders en komt hierdoor tot zelfstandigheid. De student houdt steeds rekening met de werkomgeving."
+Attitude,Professioneel werken,Excellent,"De student is zeer gemotiveerd, werkt zorgvuldig en respecteert de werkomgeving. De student werkt zelfstandig, toont zin voor initiatief en neemt de rol van de 'projecteigenaar' op."
+Maatschappelijke reflectie,Maatschappelijke reflectie,Weak,"De reflectie is onvoldoende gestructureerd en te oppervlakkig. Maatschappelijke uitdagingen worden amper in verband gebracht met de voorliggende probleemstelling of methodologie."
+Maatschappelijke reflectie,Maatschappelijke reflectie,Insufficient,"De reflectie is onvoldoende gestructureerd en te oppervlakkig. Maatschappelijke uitdagingen worden amper in verband gebracht met de voorliggende probleemstelling of methodologie."
+Maatschappelijke reflectie,Maatschappelijke reflectie,Sufficient,De reflectie is gestructureerd en snijdt één of meerdere maatschappelijke invalshoeken aan vanuit een beperkte analyse.
+Maatschappelijke reflectie,Maatschappelijke reflectie,Good,"De reflectie is goed gestructureerd, beschouwt het werk vanuit één of meerdere maatschappelijke invalshoeken en getuigt van een gedegen analyse."
+Maatschappelijke reflectie,Maatschappelijke reflectie,Very Good,"De reflectie is goed gestructureerd, beschouwt het werk vanuit één of meerdere maatschappelijke invalshoeken en getuigt van een gedegen analyse."
+Maatschappelijke reflectie,Maatschappelijke reflectie,Excellent,"De reflectie is kritisch opgebouwd en brengt het werk inzichtelijk in verband met één of meerdere maatschappelijke invalshoeken. Ze getuigt van een diepgaande analyse en bevat suggesties tot verbetering."
+Omgang met feedback,Zelfkritisch handelen,Weak,De student toont te weinig of geen bereidheid om feedback te accepteren of te gebruiken.
+Omgang met feedback,Zelfkritisch handelen,Insufficient,De student toont te weinig of geen bereidheid om feedback te accepteren of te gebruiken.
+Omgang met feedback,Zelfkritisch handelen,Sufficient,De student reageert over het algemeen goed op feedback en laat beperkte verbetering zien bij de verwerking.
+Omgang met feedback,Zelfkritisch handelen,Good,De student reageert goed op feedback en implementeert de meeste suggesties voor verbetering.
+Omgang met feedback,Zelfkritisch handelen,Very Good,De student reageert goed op feedback en implementeert de meeste suggesties voor verbetering.
+Omgang met feedback,Zelfkritisch handelen,Excellent,De student reageert constructief op feedback en implementeert suggesties voor verbetering zeer effectief en nauwkeurig.
+Zelfreflectie,Zelfkritisch handelen,Weak,De student beschikt over een minimale zelfreflectie en kan persoonlijke beperkingen of fouten moeilijk erkennen.
+Zelfreflectie,Zelfkritisch handelen,Insufficient,De student beschikt over een minimale zelfreflectie en kan persoonlijke beperkingen of fouten moeilijk erkennen.
+Zelfreflectie,Zelfkritisch handelen,Sufficient,"De student beschikt over een redelijke zelfreflectie en inzicht in persoonlijke beperkingen of fouten. Er is bereidheid tot verbetering."
+Zelfreflectie,Zelfkritisch handelen,Good,De student beschikt over een goede zelfreflectie. Erkenning van persoonlijke beperkingen en fouten leidt tot actieve betrokkenheid bij verbetering.
+Zelfreflectie,Zelfkritisch handelen,Very Good,De student beschikt over een goede zelfreflectie. Erkenning van persoonlijke beperkingen en fouten leidt tot actieve betrokkenheid bij verbetering.
+Zelfreflectie,Zelfkritisch handelen,Excellent,"De student beschikt over een uitstekende zelfreflectie, evalueert het eigen functioneren diepgaand en koppelt hier effectieve strategieën voor persoonlijke en professionele groei aan."
+Wetenschappelijke integriteit,Integriteit & ethiek,Weak,"De student besteedt onvoldoende zorg aan een correcte verwerking van gegevens en er ontbreken cruciale elementen om de eigenheid van de resultaten te verifiëren."
+Wetenschappelijke integriteit,Integriteit & ethiek,Insufficient,"De student besteedt onvoldoende zorg aan een correcte verwerking van gegevens en er ontbreken cruciale elementen om de eigenheid van de resultaten te verifiëren."
+Wetenschappelijke integriteit,Integriteit & ethiek,Sufficient,"De student refereert correct, besteedt voldoende zorg aan een correcte verwerking van gegevens en de verifieerbaarheid van resultaten."
+Wetenschappelijke integriteit,Integriteit & ethiek,Good,De student refereert correct en voorziet een goede en transparante verwerking van gegevens met het oog op reproductie van resultaten.
+Wetenschappelijke integriteit,Integriteit & ethiek,Very Good,De student refereert correct en voorziet een goede en transparante verwerking van gegevens met het oog op reproductie van resultaten.
+Wetenschappelijke integriteit,Integriteit & ethiek,Excellent,De student levert spontaan en consistent bewijs van transparantie en verantwoordelijkheid in alle aspecten van het onderzoek.
+Ethisch handelen,Integriteit & ethiek,Weak,De student heeft te weinig oog voor ethische overwegingen of richtlijnen.
+Ethisch handelen,Integriteit & ethiek,Insufficient,De student heeft te weinig oog voor ethische overwegingen of richtlijnen.
+Ethisch handelen,Integriteit & ethiek,Sufficient,De student neemt ethische overwegingen ter harte en volgt ethische richtlijnen op.
+Ethisch handelen,Integriteit & ethiek,Good,De student heeft oog voor ethische overwegingen en volgt ethische richtlijnen op.
+Ethisch handelen,Integriteit & ethiek,Very Good,De student heeft oog voor ethische overwegingen en volgt ethische richtlijnen op.
+Ethisch handelen,Integriteit & ethiek,Excellent,De student geeft spontaan blijk van ethische overwegingen.
