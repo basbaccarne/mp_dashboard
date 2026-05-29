@@ -215,25 +215,93 @@ def fallback_sample_data():
     return df
 
 
-# ── CSV export ───────────────────────────────────────────────────────────────
+# ── XLSX export ───────────────────────────────────────────────────────────────
 
-def build_export_csv(df_student, competences):
-    if EXPORT_COLUMNS is not None:
-        cols = [c for c in EXPORT_COLUMNS if c in df_student.columns]
-    else:
-        score_cols = [c for c in competences if c in df_student.columns]
-        q_cols = [c for c in df_student.columns if c.startswith("Q")]
-        wanted = ["evaluator", "rol"] + score_cols + ["evaluation"] + q_cols
-        cols = [c for c in wanted if c in df_student.columns]
+# English score (post-preprocessing) → Dutch label with score range
+SCORE_TO_XLSX = {
+    "Excellent":    "uitstekend (18-20)",
+    "Very Good":    "zeer goed (16-17)",
+    "Good":         "goed (14-15)",
+    "Sufficient":   "voldoende (10-13)",
+    "Insufficient": "onvoldoende (8-9)",
+    "Weak":         "zwak (0-7)",
+}
 
-    df_export = df_student[cols].copy()
+# Qualtrics role → generic type label used in letter-coded column
+ROL_TYPE = {
+    "Academisch promotor":  "Promotor",
+    "Industrieel promotor": "Promotor",
+    "Begeleider":           "Begeleider",
+    "Externe lezer":        "Externe lezer",
+}
+ROL_SORT = {
+    "Academisch promotor": 0,
+    "Industrieel promotor": 1,
+    "Begeleider": 2,
+    "Externe lezer": 3,
+}
 
-    if EXPORT_SORT_BY:
-        sort_cols = [c for c in EXPORT_SORT_BY if c in df_export.columns]
-        if sort_cols:
-            df_export = df_export.sort_values(sort_cols).reset_index(drop=True)
 
-    return df_export.to_csv(index=False).encode("utf-8")
+@st.cache_data(show_spinner=False)
+def load_xlsx_template_cols():
+    """Return the ordered column list from dummydata.xlsx."""
+    return pd.read_excel("data/dummydata.xlsx", header=0).columns.tolist()
+
+
+def build_export_xlsx(df_student, competences):
+    from io import BytesIO
+
+    template_cols = load_xlsx_template_cols()
+
+    # The 20 competency columns in the template (cols 8–27) map 1-to-1
+    # to the rubric competency order (same C1_1 → C10_2 sequence).
+    comp_xlsx_cols = template_cols[8:28]  # exactly 20 entries
+    comp_to_xlsx = dict(zip(competences, comp_xlsx_cols))
+
+    # Sort evaluators by role priority
+    df_work = df_student.copy()
+    df_work["_role_sort"] = df_work["rol"].map(lambda r: ROL_SORT.get(r, 99))
+    df_work = df_work.sort_values("_role_sort").reset_index(drop=True)
+
+    # Assign letter-coded role labels (A Promotor 1, B Begeleider 1, …)
+    letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    role_type_count = {}
+    coded_roles = []
+    for i, row in df_work.iterrows():
+        rtype = ROL_TYPE.get(row.get("rol", ""), row.get("rol", ""))
+        role_type_count[rtype] = role_type_count.get(rtype, 0) + 1
+        coded_roles.append(f"{letters[i]} {rtype} {role_type_count[rtype]}")
+
+    # Build output rows
+    rows = []
+    for i, (_, row) in enumerate(df_work.iterrows()):
+        q_cols = [c for c in df_work.columns if c.startswith("Q")]
+        questions = "\n".join(
+            str(row[q]) for q in q_cols if pd.notna(row.get(q))
+        )
+        out = {
+            "ID":               1,
+            "Start time":       row.get("StartDate", ""),
+            "Completion time":  row.get("RecordedDate", ""),
+            "Email":            "anonymous",
+            "ROL":              coded_roles[i],
+            "NAAM STUDENT1":    "",
+            "NAAM STUDENT":     row.get("student", ""),
+            "GEEF UW NAAM":     row.get("evaluator", ""),
+        }
+        for comp in competences:
+            xlsx_col = comp_to_xlsx.get(comp, comp)
+            score_en = row.get(comp)
+            out[xlsx_col] = SCORE_TO_XLSX.get(score_en, score_en) if pd.notna(score_en) else ""
+        out["Column1"] = row.get("evaluation", "")
+        out["Column2"] = questions
+        out["Column3"] = ""
+        rows.append(out)
+
+    df_out = pd.DataFrame(rows, columns=template_cols)
+    buf = BytesIO()
+    df_out.to_excel(buf, index=False, engine="openpyxl")
+    return buf.getvalue()
 
 
 # ── Visualization helpers ─────────────────────────────────────────────────────
@@ -583,12 +651,12 @@ score_cols = [c for c in competences if c in df_student.columns]
 
 # Export button
 with col_export:
-    filename = f"{student.replace(' ', '_')}_{st.session_state.selected_year}.csv"
+    filename = f"{student.replace(' ', '_')}_{st.session_state.selected_year}.xlsx"
     st.download_button(
-        label="⬇ Download CSV",
-        data=build_export_csv(df_student, competences),
+        label="⬇ Download XLSX",
+        data=build_export_xlsx(df_student, competences),
         file_name=filename,
-        mime="text/csv",
+        mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
         width="stretch",
     )
 
