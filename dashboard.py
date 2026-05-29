@@ -52,7 +52,7 @@ def load_users():
         return yaml.safe_load(f)["users"]
 
 
-@st.cache_data(show_spinner=False)
+@st.cache_data(show_spinner=False, ttl=300)
 def load_rubric():
     return pd.read_csv("data/rubric.csv")
 
