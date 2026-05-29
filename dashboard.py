@@ -292,7 +292,7 @@ def plot_jury_evaluation(df_scores, df_rubric):
     palette = ["#636EFA", "#EF553B", "#00CC96", "#AB63FA", "#FFA15A", "#19D3F3", "#FF6692", "#B6E880"]
     fig = go.Figure()
 
-    # Cluster background boxes and labels
+    # Cluster background boxes, labels, and repeated scale legend
     for cluster, comps in cluster_comps.items():
         ys = [comp_y[c] for c in comps]
         min_y, max_y = min(ys) - 0.5, max(ys) + 0.5
@@ -301,12 +301,22 @@ def plot_jury_evaluation(df_scores, df_rubric):
             y0=min_y, y1=max_y,
             fillcolor="lightgrey", opacity=0.1, layer="below", line_width=0,
         )
+        # Cluster name above the block
         fig.add_annotation(
             x=-0.5, y=min_y - 0.05,
             text=f"<b>{cluster}</b> (gemiddelde: {cluster_avg_labels.get(cluster, 'N/A')})",
             showarrow=False, font=dict(size=14, color="black"),
             xanchor="left", yanchor="bottom",
         )
+        # Scale legend repeated below each cluster block
+        for i, label in enumerate(SCALE):
+            fig.add_annotation(
+                x=i, y=max_y + 0.22,
+                text=label,
+                showarrow=False,
+                font=dict(size=9, color="#bbbbbb"),
+                xanchor="center", yanchor="top",
+            )
 
     # Collect which (competence, score) cells have evaluator points
     points_with_evals = set()
