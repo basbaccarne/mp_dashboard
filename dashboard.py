@@ -114,9 +114,12 @@ def preprocess_qualtrics_data(df, df_rubric):
             df = df.drop(columns=[col])
 
     # Translate Dutch score labels to English
+    dutch_ci = {k.lower(): v for k, v in DUTCH_TO_EN_SCORE.items()}
     competency_cols = [c for c in df.columns if c in col_map.values()]
     for col in competency_cols:
-        df[col] = df[col].map(lambda x: DUTCH_TO_EN_SCORE.get(x, x) if pd.notna(x) else x)
+        df[col] = df[col].map(
+            lambda x: dutch_ci.get(str(x).strip().lower(), x) if pd.notna(x) else x
+        )
 
     # Rename review / question columns
     rename = {"textual_feedback": "evaluation"}
