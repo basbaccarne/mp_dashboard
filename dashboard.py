@@ -77,6 +77,9 @@ def preprocess_qualtrics_data(df, df_rubric):
     - evaluator_4 + evaluator_5 → combined "evaluator" column
     - textual_feedback → evaluation
     - questions_1 … questions_5 → Q1 … Q5
+    - Drop invalid/test rows (empty or placeholder student names)
+    - Drop manually excluded (student, evaluator) pairs from st.secrets
+    - Deduplicate: keep only the latest submission per (student, evaluator)
     """
     df = df.copy()
     col_map = build_qualtrics_col_map(df_rubric)
@@ -107,7 +110,32 @@ def preprocess_qualtrics_data(df, df_rubric):
         rename[f"questions_{i}"] = f"Q{i}"
     df = df.rename(columns={k: v for k, v in rename.items() if k in df.columns})
 
-    return df
+    # Drop invalid/test rows — student name missing or a placeholder
+    if "student" in df.columns:
+        invalid = df["student"].isna() | df["student"].str.strip().isin(["", "---", "-", "test", "Test"])
+        df = df[~invalid]
+
+    # Drop manually excluded (student, evaluator) pairs defined in secrets
+    # Format in secrets.toml:  excluded = ["Leon Dehullu|Bas Baccarne", ...]
+    if "excluded" in st.secrets:
+        excluded_pairs = set(st.secrets["excluded"])
+        if "evaluator" in df.columns:
+            mask = df.apply(
+                lambda r: f"{r.get('student', '')}|{r.get('evaluator', '')}" in excluded_pairs,
+                axis=1,
+            )
+            df = df[~mask]
+
+    # Deduplicate: if the same evaluator submitted for the same student more than
+    # once, keep only the most recent entry based on RecordedDate
+    if "evaluator" in df.columns and "student" in df.columns and "RecordedDate" in df.columns:
+        df["RecordedDate"] = pd.to_datetime(df["RecordedDate"], errors="coerce")
+        df = (
+            df.sort_values("RecordedDate", ascending=False)
+            .drop_duplicates(subset=["student", "evaluator"], keep="first")
+        )
+
+    return df.reset_index(drop=True)
 
 
 # ── S3 / Qualtrics data fetch ─────────────────────────────────────────────────
