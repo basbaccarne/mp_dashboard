@@ -16,6 +16,7 @@ st.set_page_config(page_title="MP Evaluatie Dashboard", layout="wide")
 load_dotenv()
 
 BUCKET_NAME = "qualtrics-data-bucket-live"
+BUCKET_NAME_DAILY = "qualtrics-data-bucket-daily"
 SCALE = ["Weak", "Insufficient", "Sufficient", "Good", "Very Good", "Excellent"]
 
 # Qualtrics exports scores in Dutch — map to the English labels used in rubric.csv
@@ -164,30 +165,35 @@ def _s3_client():
     return boto3.client("s3")  # falls back to .env / ~/.aws credentials
 
 
-def fetch_qualtrics_data():
-    """Fetch and combine ALL CSVs from the Qualtrics S3 bucket.
+def _fetch_bucket(s3, bucket_name):
+    """Fetch and concatenate all CSVs from one S3 bucket. Returns empty list on error."""
+    try:
+        response = s3.list_objects_v2(Bucket=bucket_name)
+        csv_files = [o for o in response.get("Contents", []) if o["Key"].endswith(".csv")]
+        frames = []
+        for file_obj in csv_files:
+            obj = s3.get_object(Bucket=bucket_name, Key=file_obj["Key"])
+            raw = obj["Body"].read().decode("utf-8")
+            frames.append(pd.read_csv(StringIO(raw), skiprows=[1, 2]))
+        return frames
+    except Exception:
+        return []
 
-    Qualtrics creates a new export file each time, so responses accumulate
-    across multiple files. All files are concatenated into one DataFrame.
-    Row 0 = headers, rows 1-2 = Qualtrics metadata → skipped in every file.
+
+def fetch_qualtrics_data():
+    """Fetch and combine ALL CSVs from both Qualtrics S3 buckets.
+
+    - qualtrics-data-bucket-live  : per-entry exports (triggered on submission)
+    - qualtrics-data-bucket-daily : full daily exports (~22:00 UTC)
+    Both are concatenated; deduplication happens in preprocess_qualtrics_data().
     Returns (DataFrame | None, error_message | None).
     """
     try:
         s3 = _s3_client()
-        response = s3.list_objects_v2(Bucket=BUCKET_NAME)
-        csv_files = [
-            obj for obj in response.get("Contents", [])
-            if obj["Key"].endswith(".csv")
-        ]
-        if not csv_files:
-            return None, "Geen CSV-bestanden gevonden in de S3-bucket."
+        frames = _fetch_bucket(s3, BUCKET_NAME) + _fetch_bucket(s3, BUCKET_NAME_DAILY)
 
-        frames = []
-        for file_obj in csv_files:
-            obj = s3.get_object(Bucket=BUCKET_NAME, Key=file_obj["Key"])
-            raw = obj["Body"].read().decode("utf-8")
-            df_part = pd.read_csv(StringIO(raw), skiprows=[1, 2])
-            frames.append(df_part)
+        if not frames:
+            return None, "Geen CSV-bestanden gevonden in de S3-buckets."
 
         df = pd.concat(frames, ignore_index=True)
         return df, None
