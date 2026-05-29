@@ -564,6 +564,10 @@ if df_student.empty:
     render_footer()
     st.stop()
 
+# Build df_scores: evaluator column + rubric competence columns present in data
+competences = df_rubric["competence"].unique().tolist()
+score_cols = [c for c in competences if c in df_student.columns]
+
 # Export button
 with col_export:
     filename = f"{student.replace(' ', '_')}_{st.session_state.selected_year}.csv"
@@ -574,10 +578,6 @@ with col_export:
         mime="text/csv",
         width="stretch",
     )
-
-# Build df_scores: evaluator column + rubric competence columns present in data
-competences = df_rubric["competence"].unique().tolist()
-score_cols = [c for c in competences if c in df_student.columns]
 
 evaluator_col = next((c for c in ["evaluator", "Evaluator"] if c in df_student.columns), None)
 if evaluator_col:
