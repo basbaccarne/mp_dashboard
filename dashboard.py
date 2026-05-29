@@ -59,9 +59,10 @@ def load_rubric():
 
 @st.cache_data(show_spinner=False)
 def load_assignments():
+    opts = dict(skipinitialspace=True)
     if "assignments_csv" in st.secrets:
-        return pd.read_csv(StringIO(st.secrets["assignments_csv"]))
-    return pd.read_csv("data/assignments.csv")
+        return pd.read_csv(StringIO(st.secrets["assignments_csv"]), **opts)
+    return pd.read_csv("data/assignments.csv", **opts)
 
 
 # ── Qualtrics column mapping & preprocessing ─────────────────────────────────
