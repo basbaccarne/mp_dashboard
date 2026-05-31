@@ -227,6 +227,13 @@ SCORE_TO_XLSX = {
     "Weak":         "zwak (0-7)",
 }
 
+# Derived from SCORE_TO_XLSX: English score → numeric range string
+import re as _re
+SCORE_TO_RANGE = {
+    en: _re.search(r"\((\d+-\d+)\)", nl).group(1)
+    for en, nl in SCORE_TO_XLSX.items()
+}
+
 # Qualtrics role → generic type label used in letter-coded column
 ROL_TYPE = {
     "Academisch promotor":  "Promotor",
@@ -335,7 +342,14 @@ def calculate_cluster_averages(df_scores, df_rubric):
         if avg is None:
             return "N/A"
         lo, hi = int(np.floor(avg)), int(np.ceil(avg))
-        return SCALE[lo] if lo == hi else f"{SCALE[lo]} – {SCALE[hi]}"
+        if lo == hi:
+            label = SCALE[lo]
+            rng = SCORE_TO_RANGE.get(label, "")
+            return f"{label} [{rng}]" if rng else label
+        else:
+            lo_min = SCORE_TO_RANGE.get(SCALE[lo], "?").split("-")[0]
+            hi_max = SCORE_TO_RANGE.get(SCALE[hi], "?").split("-")[1]
+            return f"{SCALE[lo]} – {SCALE[hi]} [{lo_min}-{hi_max}]"
 
     return {c: avg_to_label(v) for c, v in cluster_avgs.items()}, cluster_comps
 
