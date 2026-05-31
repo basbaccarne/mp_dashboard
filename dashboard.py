@@ -234,6 +234,12 @@ SCORE_TO_RANGE = {
     for en, nl in SCORE_TO_XLSX.items()
 }
 
+# Midpoint of each score range, used for the indicative total score (/20)
+SCORE_TO_MIDPOINT = {
+    en: (int(rng.split("-")[0]) + int(rng.split("-")[1])) / 2
+    for en, rng in SCORE_TO_RANGE.items()
+}
+
 # Qualtrics role → generic type label used in letter-coded column
 ROL_TYPE = {
     "Academisch promotor":  "Promotor",
@@ -704,5 +710,37 @@ with tab_chart:
 
 with tab_reviews:
     show_reviews(df_reviews)
+
+# ── Indicatieve totaalscore ───────────────────────────────────────────────────
+
+st.markdown("---")
+
+scored_values = [
+    SCORE_TO_MIDPOINT[row[comp]]
+    for _, row in df_scores.iterrows()
+    for comp in competences
+    if comp in row and pd.notna(row[comp]) and row[comp] in SCORE_TO_MIDPOINT
+]
+
+if scored_values:
+    total = sum(scored_values) / len(scored_values)
+    n_evals = len(df_scores)
+    n_comps = len([c for c in competences if c in df_scores.columns])
+
+    midpoint_legend = ", ".join(
+        f"{k}={v:.0f}" if v == int(v) else f"{k}={v:.1f}"
+        for k, v in SCORE_TO_MIDPOINT.items()
+    )
+
+    st.markdown(f"### Indicatieve totaalscore: **{total:.1f} / 20**")
+    st.markdown(
+        f"<p style='color:grey;font-size:0.85em;'>"
+        f"Berekend als het gemiddelde van de midpuntwaarden per beoordelingsschaal "
+        f"({midpoint_legend}), "
+        f"gemiddeld over {n_comps} competenties en {n_evals} beoordelaar(s). "
+        f"Competenties zonder score (niet van toepassing voor de rol) worden niet meegeteld."
+        f"</p>",
+        unsafe_allow_html=True,
+    )
 
 render_footer()
